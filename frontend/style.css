@@ -1,8 +1,14 @@
 body {
+<<<<<<< HEAD
     background: #916a54;
     background: linear-gradient(140deg, rgba(145, 106, 84, 1) 11%, rgba(255, 189, 158, 1) 36%, rgba(255, 223, 142, 1) 71%, rgba(255, 222, 140, 1) 98%);
     color:#000;
     font-family:  "Outfit", sans-serif;
+=======
+background: #3d98ff;
+background: linear-gradient(90deg,rgba(61, 152, 255, 1) 0%, rgba(87, 199, 133, 1) 20%, rgba(237, 221, 83, 1) 16%);    color:#000;
+    font-family: 'Roboto', sans-serif;
+>>>>>>> 748c252 (Staging)
 
 
 }
