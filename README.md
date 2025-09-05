@@ -1,6 +1,6 @@
 
 <h1>EventPlanner Contract</h1>
-<li>“Utveckla ett kontrakt för att hantera anmälningar till ett evenemang. Användare kan registrera sig genom att betala en avgift, och registreringen ska stängas när en viss gräns är nådd, eller att en deadline har passerat. Kontraktet ska innehålla funktioner för att registrera ett nytt evenemang, öppna och stänga registreringen, anmälan till evenemanget, hantering av betalning, samt en lista över alla registrerade deltagare per evenemang.”</li>
+<i>“Utveckla ett kontrakt för att hantera anmälningar till ett evenemang. Användare kan registrera sig genom att betala en avgift, och registreringen ska stängas när en viss gräns är nådd, eller att en deadline har passerat. Kontraktet ska innehålla funktioner för att registrera ett nytt evenemang, öppna och stänga registreringen, anmälan till evenemanget, hantering av betalning, samt en lista över alla registrerade deltagare per evenemang.”</i>
 
 <p>Vi har utvecklat ett <b>smart kontrakt</b> som vi valt att kalla <b>"EventPlanner"</b>, eftersom det låter organisatörer skapa evenemang där deltagare kan registrera sig genom att betala en biljettavgift. Varje evenemang har en deadline när biljettförsäljningen stängs, och dessutom kan biljetterna sälja slut för evenemangen har ett maxantal biljetter. Så Eventet kan ha status Open (for sale), Closed (not for sale) och Finished (sold out). Deltagare registreras så länge eventet är öppet, inte fullt och inom tidsgränsen.
 
