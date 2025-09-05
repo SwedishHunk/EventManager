@@ -1,72 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Event Manager - Remix är bull</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <h1>Event Manager</h1>
+    <h2>Welcome to the future of event management!</h2>
+    <br />
 
-    <h1>Welcome to the future of event management!</h1><br><br>
+    <h3>
+      Below you can create your own events, register others' events and manage
+      your existing ones.
+    </h3>
 
-
-    <h2>Below you can create your own events, register others' events and manage your existing ones.</h2>
     <!-- Create Event -->
     <div id="create-event">
-        <input id="eventName" type="text" placeholder="Event name (e.g. Web3 Meetup)">
-        <input id="ticketPrice" type="number" placeholder="Ticket price in wei (e.g. 1000000000000000)">
-        <input id="userLimit" type="number" placeholder="Max participants (e.g. 50)">
-        <input id="deadline" type="number" placeholder="Deadline (unix timestamp)">
+        <h4>Create an event</h4>
+        <input
+        id="eventName"
+        type="text"
+        placeholder="Event name (e.g. Web3 Meetup)"
+        />
+        <input
+        id="ticketPrice"
+        type="number"
+        placeholder="Ticket price in wei (e.g. 1000000000000000)"
+        />
+        <input
+        id="userLimit"
+        type="number"
+        placeholder="Max participants (e.g. 50)"
+        />
+        <input
+        id="deadline"
+        type="number"
+        placeholder="Deadline (unix timestamp)"
+        />
         <button id="btnCreateEvent">Create Event</button>
     </div>
-    <hr>
-
-     <!-- Ope & Close Registration -->
-    <div id="open-close-registration">  
-        <!-- Open Registration -->
-        <div id="open-registration">
-            <input id="openEventId" type="number" placeholder="Event ID">
-            <button id="btnOpenRegistration">Open Registration</button>
+    <hr />
+    <!-- Admin Tools-->
+    <div id="admin-tools">
+        <h4>Admin Tools</h4>
+        
+        <!-- Open & Close Registration -->
+        <div id="open-close-registration">
+            <!-- Open Registration -->
+            <div id="open-registration">
+                <input id="openEventId" type="number" placeholder="Event ID" />
+                <button id="btnOpenRegistration">Open Registration</button>
+            </div>
+            
+            <!-- Close Registration -->
+            <div id="-close-registration">
+                <input id="closeEventId" type="number" placeholder="Event ID" />
+                <button id="btnCloseRegistration">Close Registration</button>
+            </div>
         </div>
-
-        <!-- Close Registration -->
-        <div id="-close-registration">
-            <input id="closeEventId" type="number" placeholder="Event ID">
-            <button id="btnCloseRegistration">Close Registration</button>
-        </div>
+        
+        <!-- Withdraw -->
+        <input id="withdrawEventId" type="number" placeholder="Event ID" />
+        <button id="btnWithdraw">Withdraw</button>
+    </div>
+    
+    <hr />
+    
+    <!-- Buy Ticket -->
+    <div id="buy-ticket">
+        <h4>Buy a ticket</h4>
+        <input id="buyEventId" type="number" placeholder="Event ID" />
+        <button id="btnBuyTicket">Buy Ticket</button>
     </div>
 
-    <hr>
+    <hr />
 
-    <!-- Buy Ticket -->
-    <input id="buyEventId" type="number" placeholder="Event ID">
-    <button id="btnBuyTicket">Buy Ticket</button>
+    <!-- Information-->
 
-    <hr>
+    <div id="information">
+        <h4>Get Information</h4>
+      <!-- Get Event Info -->
+      <input id="infoEventId" type="number" placeholder="Event ID" />
+      <button id="btnGetEventInfo">Get Event Info</button>
 
-    <!-- Get Event Info -->
-    <input id="infoEventId" type="number" placeholder="Event ID">
-    <button id="btnGetEventInfo">Get Event Info</button>
+      <!-- Get Participants -->
+      <input id="participantsEventId" type="number" placeholder="Event ID" />
+      <button id="btnGetParticipants">Get Participants</button>
 
-    <!-- Get Participants -->
-    <input id="participantsEventId" type="number" placeholder="Event ID">
-    <button id="btnGetParticipants">Get Participants</button>
+      <!-- Check Participant -->
+      <input id="checkEventId" type="number" placeholder="Event ID" />
+      <input id="checkAddress" type="text" placeholder="Wallet address" />
+      <button id="btnCheckParticipant">Check Participant</button>
+    </div>
 
-    <!-- Check Participant -->
-    <input id="checkEventId" type="number" placeholder="Event ID">
-    <input id="checkAddress" type="text" placeholder="Wallet address">
-    <button id="btnCheckParticipant">Check Participant</button>
-
-    <hr>
-
-    <!-- Withdraw -->
-    <input id="withdrawEventId" type="number" placeholder="Event ID">
-    <button id="btnWithdraw">Withdraw</button>
-
-
-</body>
-
+    <hr />
+  </body>
 </html>
