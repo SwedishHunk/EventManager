@@ -1,0 +1,39 @@
+body {
+    background: #ffce7a;
+    background: linear-gradient(90deg, rgba(255, 206, 122, 1) 6%, rgba(255, 167, 94, 1) 23%, rgba(255, 228, 158, 1) 40%, rgba(255, 222, 140, 1) 98%);
+    color:#000;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+
+h1 {
+    font-size:2rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+#create-event {
+    width:500px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top:20px;
+    padding:30px;
+    gap: 15px;
+}
+
+#btnCreateEvent {
+    background-color: #FFCE7A;
+    color:#000;
+    border-radius: 10px;
+    border: #000 1px solid;
+    padding: 10px 20px;
+    width:100px;
+    margin-top:10px;
+    align-self: center;
+}
+
+
+
