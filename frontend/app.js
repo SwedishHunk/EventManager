@@ -14,7 +14,7 @@
   const signer   = await provider.getSigner();
 
   // Byt till din kontraktsadress
-  const CONTRACT_ADDRESS = "CONTRACT_ADDRESS_HERE";
+  const CONTRACT_ADDRESS = "0x5e17b14ADd6c386305A32928F985b29bbA34Eff5";
 
   // Minimal ABI för funktionerna vi använder
   const ABI = [

@@ -28,7 +28,7 @@ h3 {
     text-align: center;
 }
 
-#create-event, #admin-tools, #buy-ticket, #information {
+#create-event, #admin-tools, #buy-ticket, #information, #output-section {
     width:500px;
     display: flex;
     flex-direction: column;
