@@ -32,7 +32,6 @@ contract EventManager {
     
     // ---- Custom errors ----
     error EventNotFound();
-    error RegistrationClosed();
     error InsufficientPayment();
     error AlreadyRegistered();
     error EventFull();
@@ -44,6 +43,7 @@ contract EventManager {
     // ---- Events (loggar) ----
     event EventCreated(uint256 indexed eventId, address indexed organizer, string name);
     event RegistrationOpened(uint256 indexed eventId);
+    event RegistrationClosed(uint256 indexed eventId);
     event Registered(uint256 indexed eventId, address indexed attendee, uint256 price);
     event Withdrawn(uint256 indexed eventId, address indexed organizer, uint256 amount);
 
