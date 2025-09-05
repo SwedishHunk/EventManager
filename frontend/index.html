@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Event Manager - Remix är bull</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <h1>Event Manager</h1>
     <h2>Welcome to the future of event management!</h2>
-    <br />
 
     <h3>
       Below you can create your own events, register others' events and manage
@@ -20,6 +22,7 @@
     <!-- Create Event -->
     <div id="create-event">
         <h4>Create an event</h4>
+        <h4>Enter some information about the event you want to host to allow your participants get tickets!</h4>
         <input
         id="eventName"
         type="text"
@@ -46,6 +49,7 @@
     <!-- Admin Tools-->
     <div id="admin-tools">
         <h4>Admin Tools</h4>
+        <h4>Enter your Event ID to open your event, and close it if you want to.</h4>
         
         <!-- Open & Close Registration -->
         <div id="open-close-registration">
@@ -56,15 +60,18 @@
             </div>
             
             <!-- Close Registration -->
-            <div id="-close-registration">
+            <div id="close-registration">
                 <input id="closeEventId" type="number" placeholder="Event ID" />
                 <button id="btnCloseRegistration">Close Registration</button>
             </div>
         </div>
         
         <!-- Withdraw -->
-        <input id="withdrawEventId" type="number" placeholder="Event ID" />
-        <button id="btnWithdraw">Withdraw</button>
+        <h4>Enter your Event ID to withdraw your earnings.</h4>
+        <div id="withdraw-section">
+            <input id="withdrawEventId" type="number" placeholder="Event ID" />
+            <button id="btnWithdraw">Withdraw</button>
+        </div>
     </div>
     
     <hr />
@@ -72,8 +79,11 @@
     <!-- Buy Ticket -->
     <div id="buy-ticket">
         <h4>Buy a ticket</h4>
-        <input id="buyEventId" type="number" placeholder="Event ID" />
-        <button id="btnBuyTicket">Buy Ticket</button>
+        <h4>What event would you like to attend? Enter the Event ID.</h4>
+        <div id="buy-ticket-section">
+            <input id="buyEventId" type="number" placeholder="Event ID" />
+            <button id="btnBuyTicket">Buy Ticket</button>
+        </div>
     </div>
 
     <hr />
@@ -82,18 +92,27 @@
 
     <div id="information">
         <h4>Get Information</h4>
+        <h4>Enter your Event ID to get a little bit of information about your event.</h4>
       <!-- Get Event Info -->
-      <input id="infoEventId" type="number" placeholder="Event ID" />
-      <button id="btnGetEventInfo">Get Event Info</button>
+      <div id="get-info-section">
+          <input id="infoEventId" type="number" placeholder="Event ID" />
+          <button id="btnGetEventInfo">Get Event Info</button>
+      </div>
 
       <!-- Get Participants -->
-      <input id="participantsEventId" type="number" placeholder="Event ID" />
-      <button id="btnGetParticipants">Get Participants</button>
+       <h4>Enter your Event ID to get a list of attendees.</h4>
+      <div id="get-participants-section">
+          <input id="participantsEventId" type="number" placeholder="Event ID" />
+          <button id="btnGetParticipants">Get Participants</button>
+      </div>
 
       <!-- Check Participant -->
-      <input id="checkEventId" type="number" placeholder="Event ID" />
-      <input id="checkAddress" type="text" placeholder="Wallet address" />
-      <button id="btnCheckParticipant">Check Participant</button>
+       <h4>See if someone specific is registered at your event.</h4>
+      <div id="check-participant-section">
+          <input id="checkEventId" type="number" placeholder="Event ID" />
+          <input id="checkAddress" type="text" placeholder="Wallet address" />
+          <button id="btnCheckParticipant">Check Participant</button>
+      </div>
     </div>
 
     <hr />
