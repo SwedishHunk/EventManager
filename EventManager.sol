@@ -25,15 +25,38 @@ contract EventManager {
         mapping(address => bool) registered; // Snabbkoll: har adressen anmält sig?
     }
 
+    address public owner;
     uint256 public nextEventId;                // Räknare för ID
     mapping(uint256 => EventData) private eventsById;
+
+    
+    // ---- Custom errors ----
+    error EventNotFound();
+    error RegistrationClosed();
+    error InsufficientPayment();
+    error AlreadyRegistered();
+    error EventFull();
+    error DeadlinePassed();
+    error OnlyOwner();
+    error OnlyOrganizer();
+    error InvalidEventData();
 
     // ---- Events (loggar) ----
     event EventCreated(uint256 indexed eventId, address indexed organizer, string name);
     event RegistrationOpened(uint256 indexed eventId);
-    event RegistrationClosed(uint256 indexed eventId);
     event Registered(uint256 indexed eventId, address indexed attendee, uint256 price);
     event Withdrawn(uint256 indexed eventId, address indexed organizer, uint256 amount);
+
+    // ---- Custom modifiers ----
+    modifier onlyOwner() {
+        if (msg.sender != owner) revert OnlyOwner();
+        _;
+    }
+    
+    modifier onlyOrganizer(uint256 _eventId) {
+        if (msg.sender != eventsById[_eventId].organizer) revert OnlyOrganizer();
+        _;
+    }
 
     // ---- Skapa nytt evenemang ----
     function createEvent(
